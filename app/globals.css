@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* New Gradient Color Palette - Purple to Warm Orange */
+    --background: 260 15% 8%; /* Deep purple-black base */
+    --foreground: 30 20% 95%; /* Warm white */
+
+    --muted: 250 10% 15%; /* Dark purple-gray */
+    --muted-foreground: 30 15% 85%; /* Warm light gray */
+    --muted-foreground-light: 30 15% 75%;
+    --muted-foreground-dark: 30 15% 65%;
+
+    --card: 30 25% 95% / 0.05; /* Warm glass effect */
+    --card-foreground: 30 20% 95%;
+
+    --popover: 260 15% 8%;
+    --popover-foreground: 30 20% 95%;
+
+    /* Primary Accent Colors - Warm Orange */
+    --primary: 25 95% 65%; /* Warm orange */
+    --primary-foreground: 260 15% 8%; /* Dark purple for contrast */
+    --primary-dark: 20 100% 55%; /* Deeper orange */
+    --primary-light: 30 85% 75%; /* Light warm orange */
+
+    /* Secondary Accent Colors */
+    --secondary: 30 20% 90%; /* Warm light */
+    --secondary-foreground: 260 15% 12%; /* Dark purple */
+
+    --accent: 250 15% 20%; /* Purple-gray */
+    --accent-foreground: 30 20% 95%; /* Warm white */
+
+    --border: 30 25% 95% / 0.12; /* Warm glass border */
+    --border-light: 30 25% 95% / 0.08;
+    --border-dark: 30 25% 95% / 0.06;
+
+    --ring: 25 95% 65%; /* Warm orange ring */
+
+    --radius: 0.5rem;
+
+    /* Custom gradient variables */
+    --gradient-start: 260 60% 15%; /* Deep purple */
+    --gradient-middle: 280 45% 25%; /* Purple-magenta */
+    --gradient-end: 25 85% 35%; /* Warm orange */
+  }
+
+  body {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)) 0%,
+      hsl(var(--gradient-middle)) 50%,
+      hsl(var(--gradient-end)) 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Glass morphism effect for cards */
+  .glass-card {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(30 25% 95% / 0.02) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Enhanced glass effect for bento cards */
+  .bento-glass {
+    background: linear-gradient(135deg, hsl(30 25% 95% / 0.08) 0%, hsl(30 25% 95% / 0.02) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(30 25% 95% / 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0
+      rgba(255, 255, 255, 0.05);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-dark));
+}
