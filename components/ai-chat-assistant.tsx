@@ -132,8 +132,8 @@ export function AIChatAssistant() {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 overflow-hidden p-0 ${
-            isOpen ? "bg-red-500 hover:bg-red-600" : "bg-primary hover:bg-primary/90 animate-meditative-glow"
+           className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 overflow-hidden p-0 ${
+            isOpen ? "bg-red-500 hover:bg-red-600" : "bg-primary hover:bg-primary/90 animate-meditative-glow ring-2 ring-primary/30"
           }`}
         >
           {isOpen ? (

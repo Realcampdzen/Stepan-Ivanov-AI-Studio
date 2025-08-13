@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { asset } from "../lib/utils"
 
 export function LargeTestimonial() {
   return (
@@ -14,7 +15,7 @@ export function LargeTestimonial() {
               </div>
               <div className="flex justify-start items-center gap-5">
                 <Image
-                  src={require('../public/images/stepan-avatar.jpg')?.default || '/images/stepan-avatar.jpg'}
+                  src={asset('/images/stepan-avatar.jpg')}
                   alt="Stepan Ivanov avatar"
                   width={48}
                   height={48}
