@@ -286,7 +286,7 @@ export function HeroSection() {
         </p>
       </div>
 
-      <Link href="#pricing-section" onClick={(e) => handleScroll(e as any, '#pricing-section')}>
+      <Link href="#pricing-section">
         <Button className="relative z-10 bg-primary text-primary-foreground hover:bg-primary-dark px-8 py-3 rounded-full font-medium text-base shadow-xl ring-2 ring-primary/20 hover:ring-primary/40 transition-all duration-300">
           Получить консультацию
         </Button>

@@ -35,7 +35,6 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={(e) => handleScroll(e, item.href)} // Add onClick handler
                 className="text-[#888888] hover:text-foreground px-4 py-2 rounded-full font-medium transition-colors"
               >
                 {item.name}
@@ -44,7 +43,7 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="#pricing-section" className="hidden md:block" onClick={(e) => handleScroll(e, '#pricing-section')}>
+          <Link href="#pricing-section" className="hidden md:block">
             <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-2 rounded-full font-medium shadow-sm">
               Связаться
             </Button>
@@ -71,7 +70,7 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <Link href="#pricing-section" className="w-full mt-4" onClick={(e) => handleScroll(e, '#pricing-section')}>
+                <Link href="#pricing-section" className="w-full mt-4">
                   <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-2 rounded-full font-medium shadow-sm">
                     Связаться
                   </Button>
