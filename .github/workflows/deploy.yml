@@ -29,12 +29,11 @@ jobs:
       - name: Install dependencies (ignore peer deps conflicts)
         run: npm install --legacy-peer-deps --no-audit --no-fund
 
-      - name: Build and Export static site
+      - name: Build static site
         env:
           BASE_PATH: /Stepan-Ivanov-AI-Studio
         run: |
           npm run build
-          npx next export -o out
           touch out/.nojekyll
 
       - name: Configure Pages
