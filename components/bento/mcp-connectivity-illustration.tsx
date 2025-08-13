@@ -7,13 +7,14 @@ interface McpConnectivityIllustrationProps {
 
 const McpConnectivityIllustration: React.FC<McpConnectivityIllustrationProps> = ({ className = "" }) => {
   // Integration data with new SVG paths
+  const bp = process.env.NEXT_PUBLIC_BASE_PATH || ''
   const integrations = [
-    { name: "Figma", icon: "/images/mcp-integrations/figma.svg", installed: true },
-    { name: "Shadcn UI", icon: "/images/mcp-integrations/shadcn.svg" },
-    { name: "Next.js", icon: "/images/mcp-integrations/nextjs.svg", installed: true },
-    { name: "Tailwind CSS", icon: "/images/mcp-integrations/tailwind-css.svg" },
-    { name: "Resend", icon: "/images/mcp-integrations/resend.svg", installed: true },
-    { name: "React", icon: "/images/mcp-integrations/react.svg" },
+    { name: "Figma", icon: `${bp}/images/mcp-integrations/figma.svg`, installed: true },
+    { name: "Shadcn UI", icon: `${bp}/images/mcp-integrations/shadcn.svg` },
+    { name: "Next.js", icon: `${bp}/images/mcp-integrations/nextjs.svg`, installed: true },
+    { name: "Tailwind CSS", icon: `${bp}/images/mcp-integrations/tailwind-css.svg` },
+    { name: "Resend", icon: `${bp}/images/mcp-integrations/resend.svg`, installed: true },
+    { name: "React", icon: `${bp}/images/mcp-integrations/react.svg` },
   ]
 
   return (
@@ -114,7 +115,7 @@ const McpConnectivityIllustration: React.FC<McpConnectivityIllustrationProps> = 
                   }}
                 >
                   <img
-                    src={integration.icon || "/placeholder.svg"}
+                    src={integration.icon || `${bp}/placeholder.svg`}
                     alt={integration.name}
                     className="w-full h-full object-contain opacity-70 grayscale" // Apply opacity and grayscale
                   />
