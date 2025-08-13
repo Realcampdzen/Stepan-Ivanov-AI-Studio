@@ -32,6 +32,12 @@ jobs:
         with:
           version: 9
 
+      - name: Ensure pnpm via npm (fallback)
+        run: |
+          if ! command -v pnpm >/dev/null 2>&1; then
+            npm i -g pnpm@9
+          fi
+
       - name: Enable Corepack (pnpm)
         run: |
           corepack enable
