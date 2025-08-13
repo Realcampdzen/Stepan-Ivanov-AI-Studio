@@ -25,34 +25,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - name: Ensure pnpm via npm (fallback)
-        run: |
-          if ! command -v pnpm >/dev/null 2>&1; then
-            npm i -g pnpm@9
-          fi
-
-      - name: Enable Corepack (pnpm)
-        run: |
-          corepack enable
-          corepack prepare pnpm@9.0.0 --activate
-          pnpm -v
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
       - name: Build and Export static site
         env:
           BASE_PATH: /Stepan-Ivanov-AI-Studio
         run: |
-          pnpm run build
-          pnpm exec next export -o out
+          npm run build
+          npx next export -o out
           touch out/.nojekyll
 
       - name: Configure Pages
