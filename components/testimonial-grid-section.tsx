@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { asset } from "../lib/utils"
 
 const testimonials = [
   {
@@ -82,7 +83,7 @@ const TestimonialCard = ({ quote, name, company, avatar, type }) => {
     backgroundElements = (
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/large-card-background.svg')", zIndex: 0 }}
+        style={{ backgroundImage: `url('${asset('/images/large-card-background.svg')}')`, zIndex: 0 }}
       />
     )
   } else if (type === "large-light") {
@@ -94,7 +95,7 @@ const TestimonialCard = ({ quote, name, company, avatar, type }) => {
     backgroundElements = (
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: "url('/images/large-card-background.svg')", zIndex: 0 }}
+        style={{ backgroundImage: `url('${asset('/images/large-card-background.svg')}')`, zIndex: 0 }}
       />
     )
   } else {

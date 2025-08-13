@@ -7,6 +7,7 @@ import { X, Send, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
+import { asset } from "../lib/utils"
 
 interface Message {
   id: string
@@ -139,7 +140,7 @@ export function AIChatAssistant() {
             <X className="w-6 h-6 text-white" />
           ) : (
             <Image
-              src="/images/stepan-avatar.jpg"
+              src={asset('/images/stepan-avatar.jpg')}
               alt="Stepan AI Assistant"
               width={56}
               height={56}
@@ -161,7 +162,7 @@ export function AIChatAssistant() {
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center border-2 border-primary-foreground/20">
                 <Image
-                  src="/images/stepan-avatar.jpg"
+                  src={asset('/images/stepan-avatar.jpg')}
                   alt="Stepan AI Assistant"
                   width={32}
                   height={32}
@@ -191,7 +192,7 @@ export function AIChatAssistant() {
                   <div className="flex items-start gap-2">
                     {message.isBot && (
                       <Image
-                        src="/images/stepan-avatar.jpg"
+                        src={asset('/images/stepan-avatar.jpg')}
                         alt="AI Assistant"
                         width={16}
                         height={16}
@@ -215,7 +216,7 @@ export function AIChatAssistant() {
                 <div className="bg-muted p-3 rounded-lg">
                   <div className="flex items-center gap-2">
                     <Image
-                      src="/images/stepan-avatar.jpg"
+                      src={asset('/images/stepan-avatar.jpg')}
                       alt="AI Assistant"
                       width={16}
                       height={16}
