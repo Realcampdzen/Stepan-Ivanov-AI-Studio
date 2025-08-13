@@ -4,56 +4,56 @@ import { asset } from "../lib/utils"
 const testimonials = [
   {
     quote:
-      "The real-time code suggestions from Pointer feel like having a senior engineer reviewing every line of code as you write. The accuracy of its recommendations has improved our overall code quality, reduced review time.",
-    name: "Annette Black",
+      "Подсказки по коду в реальном времени ощущаются как ревью старшего разработчика для каждой строки. Точность рекомендаций повысила качество и сократила время ревью.",
+    name: "Аннет Блэк",
     company: "Sony",
     avatar: asset("/images/avatars/annette-black.png"),
     type: "large-teal",
   },
   {
     quote:
-      "Integrating Pointer into our stack was smooth, and the MCP server connections saved us days of configuration work",
-    name: "Dianne Russell",
+      "Интеграция в наш стек прошла гладко, подключения MCP‑серверов сэкономили нам дни настройки",
+    name: "Дианн Рассел",
     company: "McDonald's",
     avatar: asset("/images/avatars/dianne-russell.png"),
     type: "small-dark",
   },
   {
     quote:
-      "Pointer’s multi-agent coding feature has been a game changer. We’re fixing complex bugs in hours instead of spending entire sprints on them.",
-    name: "Cameron Williamson",
+      "Мультиагентное кодирование стало переломным моментом. Мы чиним сложные баги за часы, а не тратим на них спринты.",
+    name: "Кэмерон Уильямсон",
     company: "IBM",
     avatar: asset("/images/avatars/cameron-williamson.png"),
     type: "small-dark",
   },
   {
     quote:
-      "We no longer juggle multiple tools. Pointer brought all our integrations together in one place, which simplified our entire workflow.",
-    name: "Robert Fox",
+      "Мы больше не жонглируем инструментами: все интеграции собраны в одном месте — процесс стал проще.",
+    name: "Роберт Фокс",
     company: "MasterCard",
     avatar: asset("/images/avatars/robert-fox.png"),
     type: "small-dark",
   },
   {
     quote:
-      "We started with the free plan just to test it out, but within a week we upgraded to Pro. Now, we can’t imagine coding without it",
-    name: "Darlene Robertson",
+      "Начали с базового плана для теста и через неделю перешли на Pro. Теперь сложно представить работу без этого.",
+    name: "Дарлин Робертсон",
     company: "Ferrari",
     avatar: asset("/images/avatars/darlene-robertson.png"),
     type: "small-dark",
   },
   {
     quote:
-      "Collaborative coding feels effortless now. With Pointer’s real-time previews, pair programming has become faster and more productive.",
-    name: "Cody Fisher",
+      "Совместное программирование стало проще: с превью в реальном времени пары работают быстрее и продуктивнее.",
+    name: "Коди Фишер",
     company: "Apple",
     avatar: asset("/images/avatars/cody-fisher.png"),
     type: "small-dark",
   },
   {
     quote:
-      "Deploying on Vercel with Pointer was not just simple, it felt seamless. We went from coding to seeing our changes live in minutes without worrying about build pipelines or configuration issues.",
-    name: "Albert Flores",
+      "Деплой стал бесшовным: от кода до продакшена за минуты, без волнений о пайплайнах и конфигурациях.",
+    name: "Альберт Флорес",
     company: "Louis Vuitton",
     avatar: asset("/images/avatars/albert-flores.png"),
     type: "large-light",
