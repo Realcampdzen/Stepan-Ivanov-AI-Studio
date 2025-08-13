@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const basePath = process.env.BASE_PATH || ''
+const isProd = process.env.NODE_ENV === 'production'
+const basePath = isProd ? '/Stepan-Ivanov-AI-Studio' : ''
 
 const nextConfig = {
   eslint: {
